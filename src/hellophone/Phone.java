@@ -4,8 +4,12 @@ public class Phone {
     private int length;
     private int height;
     private int thickness;
-    private String os;
-    private String processor;
+    private String os = "Generic OS";
+    private String processor = "Generic Processor";
+
+
+    //int number = new Integer("12345");
+    int number = Integer.parseInt("12345");
 
     public int getLength() {
         return length;
@@ -50,6 +54,14 @@ public class Phone {
     public Phone(String os, String processor) {
         this.os = os;
         this.processor = processor;
+    }
+
+    public static Phone createPhone() {
+        return new Phone();
+    }
+
+    public static Phone createPhone(String os, String processor) {
+        return new Phone(os, processor);
     }
 
     public Phone() {
@@ -99,5 +111,11 @@ public class Phone {
             throw new Exception("Not a valid OS!");
         }
     }
+
+    public Phone returnThisPhone() {
+        return this;
+    }
+
+
 }
 

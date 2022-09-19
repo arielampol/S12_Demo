@@ -17,11 +17,23 @@ public class Hello {
 
         arielsPhone.setOs("Android 13");
 
-        Phone genericPhone = new Phone();
+        Phone genericPhone = Phone.createPhone();
 
         System.out.println(genericPhone);
         System.out.println(arielsPhone);
         System.out.println(mikesPhone);
         System.out.println(verySpecificPhone);
+
+        Phone pointsToGenericPhone = genericPhone.returnThisPhone();
+        genericPhone.setOs("Android BUT NEW!");
+        System.out.println(pointsToGenericPhone);
+        pointsToGenericPhone.setProcessor("New Processor set from the pointsToGenericPhone");
+        System.out.println(genericPhone);
+
+        subMethod();
+    }
+
+    private static void subMethod() {
+
     }
 }
