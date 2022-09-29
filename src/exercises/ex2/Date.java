@@ -3,7 +3,7 @@ package exercises.ex2;
 import java.util.StringTokenizer;
 
 public class Date {
-    int day, month, year;
+    private int day, month, year;
 
     public Date(int year, int month, int day) {
         if( isValidDate(year, month, day) ) {
@@ -16,7 +16,6 @@ public class Date {
             this.year = 2022;
         }
     }
-
 
     public Date(int month, int day) {
         this(2022, month, day);
@@ -60,7 +59,6 @@ public class Date {
     }
 
     public static boolean isValidDate(int year, int month, int day) {
-
         if( year < 0 || year > 9999 ) {
             return false;
         }

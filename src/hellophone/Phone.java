@@ -1,5 +1,7 @@
 package hellophone;
 
+import java.util.Objects;
+
 public class Phone {
     private int length;
     private int height;
@@ -7,9 +9,20 @@ public class Phone {
     private String os = "Generic OS";
     private String processor = "Generic Processor";
 
+    private int number = Integer.parseInt("12345");
 
-    //int number = new Integer("12345");
-    int number = Integer.parseInt("12345");
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Phone phone = (Phone) o;
+        return Objects.equals(getOs(), phone.getOs()) && Objects.equals(getProcessor(), phone.getProcessor());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getOs(), getProcessor());
+    }
 
     public int getLength() {
         return length;

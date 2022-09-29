@@ -20,29 +20,29 @@ public class PrintAndScan {
 
         Phone somePhone = new Phone();
 
-        System.out.println("There is a tab between this\t\tand the next word");
-        System.out.println("This is a composed string ending in the int " + 35*3);
-
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Please input a string");
-        String input = sc.nextLine();
-        System.out.println("Please input a real number");
-        double number = sc.nextDouble();
-
-        System.out.println("You have entered: " + input);
-        System.out.printf("You have entered the number: %f\n", number);
-
-        sc.close();
-
-        sc = new Scanner(System.in);
+//        System.out.println("There is a tab between this\t\tand the next word");
+//        System.out.println("This is a composed string ending in the int " + 35*3);
+//
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("Please input a string");
+//        String input = sc.nextLine();
+//        System.out.println("Please input a real number");
+//        double number = sc.nextDouble();
+//
+//        System.out.println("You have entered: " + input);
+//        System.out.printf("You have entered the number: %f\n", number);
+//
+//        sc.close();
+//
+//        sc = new Scanner(System.in);
 
         String newString = new String("I'm a string");
-        newString = "Hey";
-        String hey = "Hey";
-        hey = "New value";
+        newString = new String("Hey");
+        String hey = new String("Hey");
         hey = "Hey";
         if( newString == hey ) {
             System.out.println("They're the same!");
+            System.out.println("But not always; only due to String interning");
         }
         System.out.println(newString);
 

@@ -26,8 +26,6 @@ public class DateTest {
         System.out.printf("TEST 4: invalid setDate() case %s\n",
                         dateExpected4.equals(date.toString()) ? "PASSED" : "FAILED");
 
-        // CUTOFF of sample
-
         // Testing the case of a valid setDate()
         date.setDate("2015-02-28");
         String dateExpected5 = "2015-02-28";
