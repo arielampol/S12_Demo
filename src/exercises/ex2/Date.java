@@ -71,6 +71,7 @@ public class Date {
             case 7:
             case 8:
             case 10:
+            case 12:
                 return day <= 31 && day > 0;
             // Months with 30 days
             case 4:
