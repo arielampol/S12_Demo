@@ -12,6 +12,7 @@ public class ArrayListDriver {
         ArrayList<String> arrListDeepCopy = new ArrayList<>(arrList);
         //Not the same as:
         ArrayList<String> arrListNotDeepCopy = arrList;
+        arrList.set(0, "Hey");
         arrList.add("Monday");
         arrList.add("Tuesday");
         arrList.add("Wednesday");
