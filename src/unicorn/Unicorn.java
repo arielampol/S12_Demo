@@ -7,6 +7,7 @@ public class Unicorn {
     private int height;
     private int hornLength;
     private int weight;
+    private static int allUnicornsCount = 0;
 
     @Override
     /**
@@ -31,14 +32,21 @@ public class Unicorn {
         this.height = height;
         this.hornLength = hornLength;
         this.weight = weight;
+        allUnicornsCount++;
     }
 
     public Unicorn() {
         new Unicorn("Default name");
+        allUnicornsCount++;
     }
 
     public Unicorn(String name) {
         this.name = name;
+        allUnicornsCount++;
+    }
+
+    public static int getAllUnicornsCount() {
+        return allUnicornsCount;
     }
 
     public String getName() {

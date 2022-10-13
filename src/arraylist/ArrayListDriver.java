@@ -60,7 +60,7 @@ public class ArrayListDriver {
 
         //Halo-halo ArrayList
         ArrayList<Object> mixedArrayList = new ArrayList<>();
-        mixedArrayList.add(new Integer.valueOf(10));
+        mixedArrayList.add(Integer.valueOf(10));
         mixedArrayList.add("A string");
         mixedArrayList.add(new ArrayList<>());
 
