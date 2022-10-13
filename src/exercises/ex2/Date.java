@@ -91,6 +91,39 @@ public class Date {
         }
     }
 
+    private boolean validateSelf() {
+        if( year < 0 || year > 9999 ) {
+            return false;
+        }
+
+        switch (month) {
+            // Months with 31 days
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                return day <= 31 && day > 0;
+            // Months with 30 days
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                return day <= 30 && day > 0;
+            // February
+            case 2:
+                if( isLeapYear(year) ) {
+                    return day <= 29 && day > 0;
+                } else {
+                    return day <= 28 && day > 0;
+                }
+            default:
+                return false;
+        }
+    }
+
     public static boolean isLeapYear(int year) {
         return ((year % 4 == 0) && (year % 100 != 0)) || (year%400 == 0);
     }
