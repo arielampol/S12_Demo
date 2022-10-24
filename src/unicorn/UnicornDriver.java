@@ -1,5 +1,8 @@
 package unicorn;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class UnicornDriver {
     public static void main(String[] args) {
         Unicorn myFirstUnicorn = new Unicorn();
@@ -10,5 +13,10 @@ public class UnicornDriver {
         myFirstUnicorn.setName("Alpha");
 
         System.out.println("Now myFirstUnicorn's name is " + myFirstUnicorn.getName());
+
+        Unicorn mySecondUnicorn = new Unicorn();
+        System.out.println("There are " + Unicorn.getAllUnicornsCount() + " unicorns in this app");
+
+        List<String> argsAsList = Arrays.asList(args);
     }
 }

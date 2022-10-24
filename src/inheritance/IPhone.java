@@ -17,7 +17,7 @@ public class IPhone extends SmartPhone {
 
     @Override
     public void charge(Charger charger) {
-        if(charger.getType().startsWith("iPhone"))
+        if(charger == Charger.LIGHTNING)
             super.charge(charger);
         else
             System.out.println("That's not an iPhone charger!");

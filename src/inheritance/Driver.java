@@ -6,6 +6,8 @@ import java.util.List;
 
 public class Driver {
     public static void main(String[] args) {
+        // Polymorphism!
+        // For any of these Phones, you can only call Phone-related methods
         Phone phone1 = new Phone();
         Phone phone2 = new SmartPhone();
         Phone phone3 = new IPhone();
@@ -32,6 +34,7 @@ public class Driver {
         // you can assign both to a List variable
         List<String> myList = new LinkedList<>();
         myList = new ArrayList<>();
+
 
     }
 }
