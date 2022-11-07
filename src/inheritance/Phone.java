@@ -3,12 +3,10 @@ package inheritance;
 public class Phone {
     private Screen screen;
     private String name;
-    private int batteryCapacity = 50;
+    protected int batteryCapacity = 50;
     private int length;
     private int height;
     private int thickness;
-
-    Object obj = new Object();
 
     public void dial(long phoneNumber) {
         dialSubMethod();
@@ -23,7 +21,10 @@ public class Phone {
     }
 
     public void charge(Charger charger) {
-        batteryCapacity += 10;
+        if(batteryCapacity <= 80)
+            batteryCapacity += 20;
+        else
+            batteryCapacity = 100;
     }
 
 }
